@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [inputBinNum, setInputBinNum] = useState(0);
+  const [outputDecNum, setOutputDecNum] = useState(0);
+
+  const handleInputBinChange = (e) => {
+    setInputBinNum(e.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Binary-2-Decimal React App</h1>
+      <input
+        type="text"
+        name="input-bin-number"
+        id="input-bin-number"
+        value={inputBinNum}
+        onChange={handleInputBinChange}
+      />
+      <p>Bin Num: {inputBinNum}</p>
+      <p>Dec Num: {outputDecNum}</p>
     </div>
   );
 }
