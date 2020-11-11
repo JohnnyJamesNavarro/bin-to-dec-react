@@ -6,7 +6,7 @@ function App() {
   const [outputDecNum, setOutputDecNum] = useState(0);
 
   const handleInputBinChange = (e) => {
-    setInputBinNum(e.target.value);
+    setInputBinNum(e.target.value.replace(/[^01]/gi, ""));
   };
 
   return (
