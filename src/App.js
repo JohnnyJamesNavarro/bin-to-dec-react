@@ -6,7 +6,11 @@ function App() {
   const [outputDecNum, setOutputDecNum] = useState(0);
 
   const handleInputBinChange = (e) => {
-    setInputBinNum(e.target.value.replace(/[^01]/gi, ""));
+    const regex = /[^01]/gi;
+    let inputValue = e.target.value;
+    let filteredValue = inputValue.replace(regex, "");
+
+    if (filteredValue.length < 9) setInputBinNum(filteredValue);
   };
 
   return (
