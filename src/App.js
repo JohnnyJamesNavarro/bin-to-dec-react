@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [inputBinNum, setInputBinNum] = useState();
-  const [outputDecNum, setOutputDecNum] = useState();
+  const [inputBinNum, setInputBinNum] = useState("");
+  const [outputDecNum, setOutputDecNum] = useState("");
 
   const handleInputBinChange = (e) => {
     const regex = /[^01]/gi;
@@ -22,16 +22,21 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Binary-2-Decimal React App</h1>
+      <p className="Title">Binary-to-Decimal React App</p>
       <input
+        className="Input"
         type="text"
         name="input-bin-number"
         id="input-bin-number"
         value={inputBinNum}
         onChange={handleInputBinChange}
       />
-      <p>Bin Num: {inputBinNum}</p>
-      <p>Dec Num: {outputDecNum}</p>
+      <p className="Output">
+        Decimal Output:{" "}
+        {outputDecNum === "" || isNaN(outputDecNum)
+          ? "Please enter a number."
+          : outputDecNum}
+      </p>
     </div>
   );
 }
