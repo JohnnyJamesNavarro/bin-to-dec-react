@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bin-to-Dec",
+  "name": "Binary-to-Decimal React App",
   "icons": [
     {
       "src": "favicon.ico",
