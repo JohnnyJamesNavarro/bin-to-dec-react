@@ -31,12 +31,27 @@ function App() {
         value={inputBinNum}
         onChange={handleInputBinChange}
       />
-      <p className="Output">
+      <p className="BottomText">
+        Binary Input:{" "}
+        {inputBinNum === "" || isNaN(inputBinNum)
+          ? "Please enter a number."
+          : inputBinNum}
+      </p>
+      <p className="BottomText">
         Decimal Output:{" "}
         {outputDecNum === "" || isNaN(outputDecNum)
           ? "Please enter a number."
           : outputDecNum}
       </p>
+
+      <a
+        className="Link"
+        href="https://github.com/JohnnyJamesNavarro"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Johnny James Navarro
+      </a>
     </div>
   );
 }

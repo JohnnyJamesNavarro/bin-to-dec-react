@@ -8,6 +8,7 @@
   color: #4af626;
   font-family: "Fira Code", monospace;
   font-weight: 500;
+  padding: 10px;
 }
 
 .Title {
@@ -16,17 +17,24 @@
 }
 
 .Input {
+  width: 65%;
   background-color: black;
   border: 3px solid #4af626;
   color: #4af626;
   outline: none;
   padding: 20px;
-  margin: 10px;
   text-align: center;
   font-size: 50px;
   letter-spacing: 10px;
 }
 
-.Output {
-  font-size: 30px;
+.BottomText {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.Link {
+  color: #4af626;
+  margin-top: 15px;
 }
